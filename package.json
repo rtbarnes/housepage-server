@@ -8,8 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com/rtbarnes/housepage-server"
+    "url": "git+https://github.com/rtbarnes/housepage-server.git"
   },
   "author": "Reed Barnes",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
