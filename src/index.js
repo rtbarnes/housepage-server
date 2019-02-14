@@ -20,10 +20,12 @@ const stickiesList = [
 const io = require('socket.io')(server);
 
 io.on('connection', function(socket){
+	io.emit(JSON.stringify(stickiesList));
   console.log(`new connection: ${socket.id}`);
   
   socket.on('new sticky', (data) => {
-    console.log("new sticky: %s", data);
+		console.log("new sticky: %s", data);
+		io.emit('updateList', data);
   });
 
   //all socket events
